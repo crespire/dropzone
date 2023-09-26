@@ -956,8 +956,7 @@ export default class Dropzone extends Emitter {
     // Update maxFiles to account for file from server.
     // PR #2003 on main repo: https://github.com/dropzone/dropzone/pull/2003
     mockFile.accepted = true;
-    mockFile.status = Dropzone.SUCCESS;
-    this.files.push(mockFile)
+    mockFile.status = Dropzone.ADDED;
     this._updateMaxFilesReachedClass();
 
     this.emit("addedfile", mockFile);
